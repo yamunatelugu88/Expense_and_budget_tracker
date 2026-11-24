@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense & Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense & Budget Tracker</h1>
+
+    <!-- Budget Input Section -->
+    <div class="budget-section">
+      <input type="number" id="budget-input" placeholder="Enter Total Budget (₹)">
+      <button id="set-budget-btn">Set Budget</button>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+      <div class="card">
+        <h3>Total Budget</h3>
+        <p id="total-budget">₹0</p>
+      </div>
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <p id="total-expenses" class="expense-text">₹0</p>
+      </div>
+      <div class="card">
+        <h3>Remaining Balance</h3>
+        <p id="balance" class="balance-text">₹0</p>
+      </div>
+    </div>
+
+    <!-- Add Expense Form -->
+    <form id="expense-form">
+      <input type="text" id="expense-name" placeholder="Expense Title (e.g., Groceries)" required>
+      <input type="number" id="expense-amount" placeholder="Amount (₹)" required>
+      <select id="expense-category">
+        <option value="Food">Food</option>
+        <option value="Travel">Travel</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Bills">Bills</option>
+        <option value="Other">Other</option>
+      </select>
+      <button type="submit">Add Expense</button>
+    </form>
+
+    <!-- Expense List -->
+    <div class="expense-list-container">
+      <h2>Expense History</h2>
+      <ul id="expense-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
